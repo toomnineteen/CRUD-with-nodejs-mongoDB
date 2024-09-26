@@ -2,13 +2,10 @@ const express = require("express");
 const cors = require("cors");
 
 const connectDB = require("./config/db");
-const bodyParse = require("body-parser");
 const ProductModels = require("./models/productModels");
 
 const app = express();
-
 app.use(cors());
-app.use(bodyParse.json({ limit: "10mb" }));
 
 //====================== GET SINGLE POST
 // GET : api/product/:id
